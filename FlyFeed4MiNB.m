@@ -103,7 +103,6 @@ for ii = 1:1000;
         pNI = 0.75;
         pInf = 1 - (pNI^PoT(ii));
         InfProb(ii) = pInf;
-
         
     else
         InfProb(ii) = 0;

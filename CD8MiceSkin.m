@@ -104,16 +104,16 @@ aicwI = 2*1-2*log(wI);
 aicI = aicbic([xI, yI, zI, wI],[2, 2, 1, 1]); 
 
 %Anderson-Darling test
-distnI = makedist('normal','mu',0.85,'sigma',3.50494);
+distnI = makedist('normal','mu',1659.04,'sigma',1482.8);
 [h,p] = adtest(DataI,'Distribution',distnI);
 
-distnbI = makedist('negative binomial','r',0.0949068,'p',0.10044);
+distnbI = makedist('negative binomial','r',1.71863,'p',0.00103484);
 [h,p] = adtest(DataI,'Distribution',distnbI);
 
-disteI = makedist('exponential','mu',0.85);
+disteI = makedist('exponential','mu',1659.04);
 [h,p] = adtest(DataI,'Distribution',disteI);
 
-distpI = makedist('poisson','lambda',0.85);
+distpI = makedist('poisson','lambda',1659.04);
 [h,p] = adtest(DataI,'Distribution',distpI);
 
 %fitting distributions

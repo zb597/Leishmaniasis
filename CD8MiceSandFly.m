@@ -66,6 +66,7 @@ distpPostC = makedist('poisson','lambda',3604.8);
 %fitting distributions
 figure;
 c1 = subplot(2,2,1);
+norPreC = fitdist(DataPreC, 'Normal');
 histfit(DataPreC,11,'Normal')
 NormPreC = mle(DataPreC, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -75,6 +76,7 @@ axis([0,170,0,40])
 suptitle('Pre Mouse C')
 
 c2 = subplot(2,2,2);
+nbPreC = fitdist(DataPreC, 'Negative Binomial');
 histfit(DataPreC,11,'Negative Binomial')
 NegBinPreC = mle(DataPreC, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -83,6 +85,7 @@ title('Negative Binomial Distribution')
 axis([0,170,0,40])
 
 c3 = subplot(2,2,3);
+expPreC = fitdist(DataPreC, 'Exponential');
 histfit(DataPreC,11,'Exponential')
 ExpoPreC = mle(DataPreC, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -91,6 +94,7 @@ title('Exponential Distribution')
 axis([0,170,0,40])
 
 c4 = subplot(2,2,4);
+poiPreC = fitdist(DataPreC, 'Poisson');
 histfit(DataPreC,11,'Poisson')
 PoiPreC = mle(DataPreC, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -100,6 +104,7 @@ axis([0,170,0,40])
 
 figure;
 C1 = subplot(2,2,1);
+norPostC = fitdist(DataPostC, 'Normal');
 histfit(DataPostC,11,'Normal')
 NormPostC = mle(DataPostC, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -109,6 +114,7 @@ xlim([0,inf])
 suptitle('Post Mouse C')
 
 C2 = subplot(2,2,2);
+nbPostC = fitdist(DataPostC, 'Negative Binomial');
 histfit(DataPostC,11,'Negative Binomial')
 NegBinPostC = mle(DataPostC, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -117,6 +123,7 @@ title('Negative Binomial Distribution')
 axis([0,59400,0,40])
 
 C3 = subplot(2,2,3);
+expPostC = fitdist(DataPostC, 'Exponential');
 histfit(DataPostC,11,'Exponential')
 ExpoPostC = mle(DataPostC, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -124,6 +131,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 C4 = subplot(2,2,4);
+poiPostC = fitdist(DataPostC, 'Poisson');
 histfit(DataPostC,11,'Poisson')
 PoiPostC = mle(DataPostC, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -198,6 +206,7 @@ distpPostI = makedist('poisson','lambda',15.9);
 %fitting distributions
 figure;
 i1 = subplot(2,2,1);
+norPreI = fitdist(DataPreI, 'Normal');
 histfit(DataPreI,11,'Normal')
 NormPreI = mle(DataPreI, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -207,6 +216,7 @@ xlim([0,inf])
 suptitle('Pre Mouse I')
 
 i2 = subplot(2,2,2);
+nbPreI = fitdist(DataPreI, 'Negative Binomial');
 histfit(DataPreI,11,'Negative Binomial')
 NegBinPreI = mle(DataPreI, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -215,6 +225,7 @@ title('Negative Binomial Distribution')
 axis([0,22,0,40])
 
 i3 = subplot(2,2,3);
+expPreI = fitdist(DataPreI, 'Exponential');
 histfit(DataPreI,11,'Exponential')
 ExpoPreI = mle(DataPreI, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -222,6 +233,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 i4 = subplot(2,2,4);
+poiPreI = fitdist(DataPreI, 'Poisson');
 histfit(DataPreI,11,'Poisson')
 PoiPreI = mle(DataPreI, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -232,6 +244,7 @@ linkaxes([i1,i3,i4],'xy')
 
 figure;
 I1 = subplot(2,2,1);
+norPostI = fitdist(DataPostI, 'Normal');
 histfit(DataPostI,11,'Normal')
 NormPostI = mle(DataPostI, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -241,6 +254,7 @@ xlim([0,inf])
 suptitle('Post Mouse I')
 
 I2 = subplot(2,2,2);
+nbPostI = fitdist(DataPostI, 'Negative Binomial');
 histfit(DataPostI,11,'Negative Binomial')
 NegBinPostI = mle(DataPostI, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -249,6 +263,7 @@ title('Negative Binomial Distribution')
 axis([0,286,0,40])
 
 I3 = subplot(2,2,3);
+expPostB = fitdist(DataPostI, 'Exponential');
 histfit(DataPostI,11,'Exponential')
 ExpoPostI = mle(DataPostI, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -256,6 +271,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 I4 = subplot(2,2,4);
+poiPostI = fitdist(DataPostI, 'Poisson');
 histfit(DataPostI,11,'Poisson')
 PoiPostI = mle(DataPostI, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -330,6 +346,7 @@ distpPost4 = makedist('poisson','lambda',410.825);
 %fitting distributions
 figure;
 r41 = subplot(2,2,1);
+norPre4 = fitdist(DataPre4, 'Normal');
 histfit(DataPre4,11,'Normal')
 NormPre4 = mle(DataPre4, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -339,6 +356,7 @@ xlim([0,inf])
 suptitle('Pre Mouse RAG 4 Experiment 4')
 
 r42 = subplot(2,2,2);
+nbPre4 = fitdist(DataPre4, 'Negative Binomial');
 histfit(DataPre4,11,'Negative Binomial')
 NegBinPre4 = mle(DataPre4, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -347,6 +365,7 @@ title('Negative Binomial Distribution')
 axis([0,1540,0,40])
 
 r43 = subplot(2,2,3);
+expPre4 = fitdist(DataPre4, 'Exponential');
 histfit(DataPre4,11,'Exponential')
 ExpoPre4 = mle(DataPre4, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -354,6 +373,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 r44 = subplot(2,2,4);
+poiPre4 = fitdist(DataPre4, 'Poisson');
 histfit(DataPre4,11,'Poisson')
 PoiPre4 = mle(DataPre4, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -364,6 +384,7 @@ linkaxes([r41,r43,r44],'xy')
 
 figure;
 R41 = subplot(2,2,1);
+norPost4 = fitdist(DataPost4, 'Normal');
 histfit(DataPost4,11,'Normal')
 NormPost4 = mle(DataPost4, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -373,6 +394,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 4 Experiment 4')
 
 R42 = subplot(2,2,2);
+nbPost = fitdist(DataPost4, 'Negative Binomial');
 histfit(DataPost4,11,'Negative Binomial')
 NegBinPost4 = mle(DataPost4, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -381,6 +403,7 @@ title('Negative Binomial Distribution')
 axis([0,7590,0,40])
 
 R43 = subplot(2,2,3);
+expPost4 = fitdist(DataPost4, 'Exponential');
 histfit(DataPost4,11,'Exponential')
 ExpoPost4 = mle(DataPost4, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -388,6 +411,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R44 = subplot(2,2,4);
+poiPost4 = fitdist(DataPost4, 'Poisson');
 histfit(DataPost4,11,'Poisson')
 PoiPost4 = mle(DataPost4, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -462,6 +486,7 @@ distpPost54 = makedist('poisson','lambda',794.475);
 %fitting distributions
 figure;
 r541 = subplot(2,2,1);
+norPre54 = fitdist(DataPre54, 'Normal');
 histfit(DataPre54,11,'Normal')
 NormPre54 = mle(DataPre54, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -471,6 +496,7 @@ xlim([0,inf])
 suptitle('Pre Mouse RAG 5 Experiment 4')
 
 r542 = subplot(2,2,2);
+nbPre54 = fitdist(DataPre54, 'Negative Binomial');
 histfit(DataPre54,11,'Negative Binomial')
 NegBinPre54 = mle(DataPre54, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -479,6 +505,7 @@ title('Negative Binomial Distribution')
 axis([0,1320,0,40])
 
 r543 = subplot(2,2,3);
+expPre54 = fitdist(DataPre54, 'Exponential');
 histfit(DataPre54,11,'Exponential')
 ExpoPre54 = mle(DataPre54, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -486,6 +513,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 r544 = subplot(2,2,4);
+poiPre54 = fitdist(DataPre54, 'Poisson');
 histfit(DataPre54,11,'Poisson')
 PoiPre54 = mle(DataPre54, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -496,6 +524,7 @@ linkaxes([r541,r543,r544],'xy')
 
 figure;
 R541 = subplot(2,2,1);
+norPost54 = fitdist(DataPost54, 'Normal');
 histfit(DataPost54,11,'Normal')
 NormPost54 = mle(DataPost54, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -505,6 +534,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 5 Experiment 4')
 
 R542 = subplot(2,2,2);
+nbPost54 = fitdist(DataPost54, 'Negative Binomial');
 histfit(DataPost54,11,'Negative Binomial')
 NegBinPost54 = mle(DataPost54, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -513,6 +543,7 @@ title('Negative Binomial Distribution')
 axis([0,8690,0,40])
 
 R543 = subplot(2,2,3);
+expPost54 = fitdist(DataPost54, 'Exponential');
 histfit(DataPost54,11,'Exponential')
 ExpoPost54 = mle(DataPost54, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -520,6 +551,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R544 = subplot(2,2,4);
+poiPost54 = fitdist(DataPost54, 'Poisson');
 histfit(DataPost54,11,'Poisson')
 PoiPost54 = mle(DataPost54, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -594,6 +626,7 @@ distpPost7 = makedist('poisson','lambda',46685.9   );
 %fitting distributions
 figure;
 r71 = subplot(2,2,1);
+norPre7 = fitdist(DataPre7, 'Normal');
 histfit(DataPre7,11,'Normal')
 NormPre7 = mle(DataPre7, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -603,6 +636,7 @@ xlim([0,inf])
 suptitle('Pre Mouse RAG 7 Experiment 4')
 
 r72 = subplot(2,2,2);
+nbPre7 = fitdist(DataPre7, 'Negative Binomial');
 histfit(DataPre7,11,'Negative Binomial')
 NegBinPre7 = mle(DataPre7, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -611,6 +645,7 @@ title('Negative Binomial Distribution')
 axis([0,79200,0,20])
 
 r73 = subplot(2,2,3);
+expPre7 = fitdist(DataPre7, 'Exponential');
 histfit(DataPre7,11,'Exponential')
 ExpoPre7 = mle(DataPre7, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -618,6 +653,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 r74 = subplot(2,2,4);
+poiPre7 = fitdist(DataPre7, 'Poisson');
 histfit(DataPre7,11,'Poisson')
 PoiPre7 = mle(DataPre7, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -628,6 +664,7 @@ linkaxes([r71,r73,r74],'xy')
 
 figure;
 R71 = subplot(2,2,1);
+norPost7 = fitdist(DataPost7, 'Normal');
 histfit(DataPost7,11,'Normal')
 NormPost7 = mle(DataPost7, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -637,6 +674,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 7 Experiment 4')
 
 R72 = subplot(2,2,2);
+nbPost7 = fitdist(DataPost7, 'Negative Binomial');
 histfit(DataPost7,11,'Negative Binomial')
 NegBinPost7 = mle(DataPost7, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -645,6 +683,7 @@ title('Negative Binomial Distribution')
 axis([0,396000,0,30])
 
 R73 = subplot(2,2,3);
+expPost7 = fitdist(DataPost7, 'Exponential');
 histfit(DataPost7,11,'Exponential')
 ExpoPost7 = mle(DataPost7, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -652,6 +691,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R74 = subplot(2,2,4);
+poiPost7 = fitdist(DataPost7, 'Poisson');
 histfit(DataPost7,11,'Poisson')
 PoiPost7 = mle(DataPost7, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -726,6 +766,7 @@ distpPost9 = makedist('poisson','lambda',172.9);
 %fitting distributions
 figure;
 r91 = subplot(2,2,1);
+norPre9 = fitdist(DataPre9, 'Normal');
 histfit(DataPre9,11,'Normal')
 NormPre9 = mle(DataPre9, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -735,6 +776,7 @@ xlim([0,inf])
 suptitle('Pre Mouse RAG 9 Experiment 4')
 
 r92 = subplot(2,2,2);
+nbPre9 = fitdist(DataPre9, 'Negative Binomial');
 histfit(DataPre9,11,'Negative Binomial')
 NegBinPre9 = mle(DataPre9, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -743,6 +785,7 @@ title('Negative Binomial Distribution')
 axis([0,2090,0,40])
 
 r93 = subplot(2,2,3);
+expPre9 = fitdist(DataPre9, 'Exponential');
 histfit(DataPre9,11,'Exponential')
 ExpoPre9 = mle(DataPre9, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -750,6 +793,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 r94 = subplot(2,2,4);
+poiPre9 = fitdist(DataPre9, 'Poisson');
 histfit(DataPre9,11,'Poisson')
 PoiPre9 = mle(DataPre9, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -760,6 +804,7 @@ linkaxes([r91,r93,r94],'xy')
 
 figure;
 R91 = subplot(2,2,1);
+norPost9 = fitdist(DataPost9, 'Normal');
 histfit(DataPost9,11,'Normal')
 NormPost9 = mle(DataPost9, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -769,6 +814,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 9 Experiment 4')
 
 R92 = subplot(2,2,2);
+nbPost9 = fitdist(DataPost9, 'Negative Binomial');
 histfit(DataPost9,11,'Negative Binomial')
 NegBinPost9 = mle(DataPost9, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -777,6 +823,7 @@ title('Negative Binomial Distribution')
 axis([0,4730,0,40])
 
 R93 = subplot(2,2,3);
+expPost9 = fitdist(DataPost9, 'Exponential');
 histfit(DataPost9,11,'Exponential')
 ExpoPost9 = mle(DataPost9, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -784,6 +831,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R94 = subplot(2,2,4);
+poiPost9 = fitdist(DataPost9, 'Poisson');
 histfit(DataPost9,11,'Poisson')
 PoiPost9 = mle(DataPost9, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -858,6 +906,7 @@ distpPost2 = makedist('poisson','lambda',140);
 %fitting distributions
 figure;
 r21 = subplot(2,2,1);
+norPre2 = fitdist(DataPre2, 'Normal');
 histfit(DataPre2,11,'Normal')
 NormPre2 = mle(DataPre2, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -867,6 +916,7 @@ axis([0,2090,0,40])
 suptitle('Pre Mouse RAG 2 Experiment 5')
 
 r22 = subplot(2,2,2);
+nbPre2 = fitdist(DataPre2, 'Negative Binomial');
 histfit(DataPre2,11,'Negative Binomial')
 NegBinPre2 = mle(DataPre2, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -875,6 +925,7 @@ title('Negative Binomial Distribution')
 axis([0,2090,0,40])
 
 r23 = subplot(2,2,3);
+expPre2 = fitdist(DataPre2, 'Exponential');
 histfit(DataPre2,11,'Exponential')
 ExpoPre2 = mle(DataPre2, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -883,6 +934,7 @@ title('Exponential Distribution')
 axis([0,2090,0,40])
 
 r24 = subplot(2,2,4);
+poiPre2 = fitdist(DataPre2, 'Poisson');
 histfit(DataPre2,11,'Poisson')
 PoiPre2 = mle(DataPre2, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -894,6 +946,7 @@ linkaxes([r21,r23,r24],'xy')
 
 % figure;
 R21 = subplot(2,2,1);
+norPost2 = fitdist(DataPost2, 'Normal');
 histfit(DataPost2,11,'Normal')
 NormPost2 = mle(DataPost2, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -903,6 +956,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 2 Experiment 5')
 
 R22 = subplot(2,2,2);
+nbPost2 = fitdist(DataPost2, 'Negative Binomial');
 histfit(DataPost2,11,'Negative Binomial')
 NegBinPost2 = mle(DataPost2, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -911,6 +965,7 @@ title('Negative Binomial Distribution')
 axis([0,3740,0,40])
 
 R23 = subplot(2,2,3);
+expPost2 = fitdist(DataPost2, 'Exponential');
 histfit(DataPost2,11,'Exponential')
 ExpoPost2 = mle(DataPost2, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -918,6 +973,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R24 = subplot(2,2,4);
+poiPost2 = fitdist(DataPost2, 'Poisson');
 histfit(DataPost2,11,'Poisson')
 PoiPost2 = mle(DataPost2, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -992,6 +1048,7 @@ distpPost55 = makedist('poisson','lambda',18.8);
 %fitting distributions
 figure;
 r551 = subplot(2,2,1);
+norPre55 = fitdist(DataPre55, 'Normal');
 histfit(DataPre55,11,'Normal')
 NormPre55 = mle(DataPre55, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -1001,6 +1058,7 @@ xlim([0,inf])
 suptitle('Pre Mouse RAG 5 Experiment 5')
 
 r552 = subplot(2,2,2);
+nbPre55 = fitdist(DataPre55, 'Negative Binomial');
 histfit(DataPre55,11,'Negative Binomial')
 NegBinPre55 = mle(DataPre55, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -1009,6 +1067,7 @@ title('Negative Binomial Distribution')
 axis([0,90,0,30])
 
 r553 = subplot(2,2,3);
+expPre55 = fitdist(DataPre55, 'Exponential');
 histfit(DataPre55,11,'Exponential')
 ExpoPre55 = mle(DataPre55, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -1016,6 +1075,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 r554 = subplot(2,2,4);
+poiPre55 = fitdist(DataPre55, 'Poisson');
 histfit(DataPre55,11,'Poisson')
 PoiPre55 = mle(DataPre55, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -1026,6 +1086,7 @@ linkaxes([r551,r553,r554],'xy')
 
 figure;
 R551 = subplot(2,2,1);
+norPost55 = fitdist(DataPost55, 'Normal');
 histfit(DataPost55,11,'Normal')
 NormPost55 = mle(DataPost55, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -1035,6 +1096,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 5 Experiment 5')
 
 R552 = subplot(2,2,2);
+nbPost55 = fitdist(DataPost55, 'Negative Binomial');
 histfit(DataPost55,11,'Negative Binomial')
 NegBinPost55 = mle(DataPost55, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -1043,6 +1105,7 @@ title('Negative Binomial Distribution')
 axis([0,726,0,40])
 
 R553 = subplot(2,2,3);
+expPost55 = fitdist(DataPost55, 'Exponential');
 histfit(DataPost55,11,'Exponential')
 ExpoPost55 = mle(DataPost55, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -1050,6 +1113,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R554 = subplot(2,2,4);
+poiPost55 = fitdist(DataPost55, 'Poisson');
 histfit(DataPost55,11,'Poisson')
 PoiPost55 = mle(DataPost55, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -1124,6 +1188,7 @@ distpPost8 = makedist('poisson','lambda',0.4);
 %fitting distributions
 figure;
 r81 = subplot(2,2,1);
+norPre8 = fitdist(DataPre8, 'Normal');
 histfit(DataPre8,11,'Normal')
 NormPre8 = mle(DataPre8, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -1133,6 +1198,7 @@ xlim([0,inf])
 suptitle('Pre Mouse RAG 8 Experiment 5')
 
 r82 = subplot(2,2,2);
+nbPre8 = fitdist(DataPre8, 'Negative Binomial');
 histfit(DataPre8,11,'Negative Binomial')
 NegBinPre8 = mle(DataPre8, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -1141,6 +1207,7 @@ title('Negative Binomial Distribution')
 axis([0,575,0,40])
 
 r83 = subplot(2,2,3);
+expPre8 = fitdist(DataPre8, 'Exponential');
 histfit(DataPre8,11,'Exponential')
 ExpoPre8 = mle(DataPre8, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -1148,6 +1215,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 r84 = subplot(2,2,4);
+poiPre8 = fitdist(DataPre8, 'Poisson');
 histfit(DataPre8,11,'Poisson')
 PoiPre8 = mle(DataPre8, 'distribution', 'Poisson');
 xlabel('Parasite Count')
@@ -1158,6 +1226,7 @@ linkaxes([r81,r83,r84],'xy')
 
 figure;
 R81 = subplot(2,2,1);
+norPost8 = fitdist(DataPost8, 'Normal');
 histfit(DataPost8,11,'Normal')
 NormPost8 = mle(DataPost8, 'distribution', 'Normal');
 xlabel('Parasite Count')
@@ -1167,6 +1236,7 @@ xlim([0,inf])
 suptitle('Post Mouse RAG 8 Experiment 5')
 
 R82 = subplot(2,2,2);
+nbPost8 = fitdist(DataPost8, 'Negative Binomial');
 histfit(DataPost8,11,'Negative Binomial')
 NegBinPost8 = mle(DataPost8, 'distribution', 'Negative Binomial');
 xlabel('Parasite Count')
@@ -1175,6 +1245,7 @@ title('Negative Binomial Distribution')
 axis([0,8,0,40])
 
 R83 = subplot(2,2,3);
+expPost8 = fitdist(DataPost8, 'Exponential');
 histfit(DataPost8,11,'Exponential')
 ExpoPost8 = mle(DataPost8, 'distribution', 'Exponential');
 xlabel('Parasite Count')
@@ -1182,6 +1253,7 @@ ylabel('Density')
 title('Exponential Distribution')
 
 R84 = subplot(2,2,4);
+poiPost8 = fitdist(DataPost8, 'Poisson');
 histfit(DataPost8,11,'Poisson')
 PoiPost8 = mle(DataPost8, 'distribution', 'Poisson');
 xlabel('Parasite Count')
